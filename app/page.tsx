@@ -39,11 +39,12 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <EventsSection />
-      <CertificationsSection />
       <AchievementsSection />
-      <VolunteeringSection />
+      <EventsSection />
       <ResponsibilitiesSection />
+      <CertificationsSection />
+      <VolunteeringSection />
+      
     </div>
   )
 }
