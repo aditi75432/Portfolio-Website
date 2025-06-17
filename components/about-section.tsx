@@ -34,8 +34,8 @@ export default function AboutSection() {
             transition={{ staggerChildren: 0.2 }}
           >
             <motion.p variants={fadeInUp} className="text-lg leading-relaxed glass-card p-6">
-              I'm a passionate Software Engineer and AI Enthusiast currently pursuing my Bachelor's in Information
-              Technology at Indira Gandhi Delhi Technical University for Women with a CGPA of 9.25/10.
+              I'm a passionate tech Enthusiast currently pursuing my Bachelor's in Information
+              Technology at Indira Gandhi Delhi Technical University for Women with a CGPA of 9.40/10.
             </motion.p>
 
             <motion.p variants={fadeInUp} className="text-lg leading-relaxed glass-card p-6">

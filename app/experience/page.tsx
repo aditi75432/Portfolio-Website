@@ -17,6 +17,31 @@ type Experience = {
 export default function ExperiencePage() {
   const experiences: Experience[] = [
     {
+      title: "LFX 2025 Intern",
+      company: "The Linux Foundation @RISC-V International",
+      period: "Jun. 2025 - present",
+      location: "Remote",
+      description: [
+        "Workload Analysis Flow Using RISC-V Olympia Performance Model.",
+        "Establish a SimPoint flow to reduce the workloads (QEMU or other instruction set simulators",
+        "Tools to run traces on Olympia and generate perf data (python, C++).",
+      ],
+      technologies: ["Python", "C++", "Computer Architecture", "SimPoint", "QEMU"],
+      image: "/riscv.png",
+    },
+    {
+      title: "Quantum Computing Research Intern",
+      company: "Defence Research and Development Organisation (DRDO) - Scientific Analysis Lab",
+      period: "Jun. 2025 - Jul. 2025",
+      location: "Delhi, India",
+      description: [
+        "Quantum-safe cryptographic algorithms and their classical-quantum interface, enhancing secure data transmission strategies at DRDO-SAG.",
+        
+      ],
+      technologies: ["Python", "Quantum Computing"],
+      image: "/drdo.png",
+    },
+    {
       title: "ML Research Intern",
       company: "Indian Institute of Remote Sensing, ISRO",
       period: "Jun. 2024 - Jul. 2024",

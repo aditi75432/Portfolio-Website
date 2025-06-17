@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Typewriter } from "react-simple-typewriter"
+import { Github, Linkedin } from 'lucide-react';
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -167,29 +168,41 @@ export default function HeroSection() {
 </motion.h2>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white relative overflow-hidden group"
-                onClick={scrollToAbout}
-              >
-                <span className="relative z-10">Explore My Journey</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </Button>
+  className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-8"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6, duration: 0.8 }}
+>
+  {/* Explore Button */}
+  <Button
+    size="lg"
+    className="bg-primary hover:bg-primary/90 text-white relative overflow-hidden group"
+    onClick={scrollToAbout}
+  >
+    <span className="relative z-10">Explore My Journey</span>
+    <span className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+  </Button>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-primary text-primary hover:bg-primary/10 relative overflow-hidden group"
-              >
-                <span className="relative z-10">Download Resume</span>
-                <span className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </Button>
-            </motion.div>
+  {/* Social Icons */}
+  <div className="flex gap-4">
+    <a
+      href="https://github.com/aditi75432"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary hover:text-primary/70 transition-colors"
+    >
+      <Github className="w-6 h-6" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/aditi-mehta-6b471a287/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary hover:text-primary/70 transition-colors"
+    >
+      <Linkedin className="w-6 h-6" />
+    </a>
+  </div>
+</motion.div>
           </motion.div>
 
           <motion.div
@@ -215,7 +228,7 @@ export default function HeroSection() {
               animate={{ y: [0, -5, 0] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2, ease: "easeInOut" }}
             >
-              <span className="font-bold">Microsoft Student Ambassador</span>
+              <span className="font-bold">Linux Foundation @RISC-V Intern</span>
             </motion.div>
 
             <div className="absolute -z-10 inset-0 blur-3xl bg-primary/20 rounded-full"></div>

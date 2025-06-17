@@ -18,7 +18,14 @@ export default function AchievementsSection() {
 
   const achievements: Achievement[] = [
     {
-      title: "InnovateX Hackathon Winner",
+      title: "LFX'25 Intern",
+      description: "The Linux Foundation @RISC-V International Mentee",
+      icon: <Trophy className="h-8 w-8" />,
+      details:
+        " Selected as mentee for the Linux Foundation’s RISC-V Olympia Model (LFX’ 2025) (Open- Source Program) from a globally competitive pool.",
+    },
+    {
+      title: "InnovateX 24 Hr Hackathon Winner",
       description: "Top 4 at Delhi Technological University",
       icon: <Trophy className="h-8 w-8" />,
       details:
@@ -32,7 +39,7 @@ export default function AchievementsSection() {
         "Selected as a Beta Microsoft Learn Student Ambassador, representing Microsoft's prestigious student leadership program. Organized workshops and events to help fellow students learn new technologies and develop technical skills.",
     },
     {
-      title: "400+ Coding Problems Solved",
+      title: "500+ Coding Problems Solved",
       description: "LeetCode, GeeksForGeeks, CodeForces",
       icon: <Code className="h-8 w-8" />,
       details:
@@ -69,7 +76,7 @@ export default function AchievementsSection() {
     },
     {
       title: "Bharat Ko Jaano Pratiyogita",
-      description: "Rank 191",
+      description: "3rd Position",
       icon: <Award className="h-8 w-8" />,
       details:
         "Third Position at Bharat Ko Jaano Quiz at Zonal Level",

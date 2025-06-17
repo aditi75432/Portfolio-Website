@@ -22,8 +22,8 @@ const orbitron = Orbitron({
 })
 
 export const metadata: Metadata = {
-  title: "Aditi Mehta | Software Engineer & AI Enthusiast",
-  description: "Portfolio of Aditi Mehta - Software Engineer, AI Enthusiast, and Bharatanatyam Dancer",
+  title: "Aditi Mehta | Code with Purpose",
+  description: "Portfolio of Aditi Mehta - Engineering Ideas into Code, Turning Logic into Impact, and Bharatanatyam Dancer",
 }
 
 export default function RootLayout({

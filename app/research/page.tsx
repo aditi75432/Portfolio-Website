@@ -22,17 +22,17 @@ export default function ResearchPage() {
         "Identifying Disaster-Related Tweets Using Natural Language Processing and Core Machine Learning Algorithms",
       conference: "Springer 6th International Conference on Artificial Intelligence and Speech Technology 2024",
       date: "2024",
-      authors: ["Aditi Mehta", "  Arshiya Garg"],
+      authors: ["Aditi Mehta", "Arshiya Garg"],
       abstract:
         "This research paper focuses on the application of Natural Language Processing (NLP) techniques and machine learning algorithms to identify and classify disaster-related tweets. By leveraging tokenization, stemming, and TF-IDF vectorization, we developed a model that achieves 82% accuracy in distinguishing between tweets that announce real disasters and those that do not. The findings contribute to the field of crisis informatics and demonstrate the potential of automated systems to support emergency response efforts by filtering social media content during critical events.",
-      link: "https://link.springer.com/conference/aist",
+      link: "https://link.springer.com/chapter/10.1007/978-3-031-91331-0_15",
       image: "/springer.png",
     },
     {
       title: "Impact of Particulate Matter (PM2.5) and Heat Index during El-Nina Period over Delhi, UP",
       conference: "URSI RCRS Conference",
       date: "2024",
-      authors: ["Dr. Manu Mehta (IIRS)","Mehak Sharma","Anusha Arora", "Aditi Mehta","Nishtha Gupta" ],
+      authors: ["Dr. Manu Mehta (IIRS)","Mehak Sharma","Anusha Arora", "Aditi Mehta","Nishtha Mishra" ],
       abstract:
         "This research investigates the correlation between particulate matter (PM2.5) concentrations and heat index during El-Nina periods in Delhi and Uttar Pradesh regions. Using Python-based data extraction and visualization tools (Pandas, IMDlib, Seaborn), we analyzed large-scale meteorological datasets to identify patterns and relationships. The findings provide valuable insights into environmental health concerns and climate change impacts in densely populated urban areas of North India.",
       link: "https://ursi.org/conferences.php",
