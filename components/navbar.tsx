@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
-import { ThemeToggle } from "./theme-toggle"
+// import { ThemeToggle } from "./theme-toggle"
 import { motion } from "framer-motion"
 
 const navLinks = [
@@ -50,7 +50,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            AM
+            Aditi Mehta
           </motion.span>
         </Link>
 
@@ -83,13 +83,13 @@ export default function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
           >
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </motion.div>
         </div>
 
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center md:hidden space-x-4">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-foreground glass p-2 rounded-full"

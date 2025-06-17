@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="font-display text-xl font-bold gradient-text">Aditi Mehta</h3>
-            <p className="text-sm text-foreground/70 mt-1">Software Engineer | AI Enthusiast | Bharatanatyam Dancer</p>
+            <p className="text-sm text-foreground/70 mt-1">Turning Logic into Impact | Bharatanatyam Dancer</p>
           </div>
 
           <div className="flex space-x-6">
