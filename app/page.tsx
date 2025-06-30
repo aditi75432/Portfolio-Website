@@ -38,8 +38,8 @@ export default function Home() {
     <div className="pt-16 relative">
       <HeroSection />
       <AboutSection />
-      <SkillsSection />
       <AchievementsSection />
+      <SkillsSection />
       <EventsSection />
       <ResponsibilitiesSection />
       <CertificationsSection />

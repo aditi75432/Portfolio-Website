@@ -35,7 +35,7 @@ export default function AboutSection() {
           >
             <motion.p variants={fadeInUp} className="text-lg leading-relaxed glass-card p-6">
               I'm a passionate tech Enthusiast currently pursuing my Bachelor's in Information
-              Technology at Indira Gandhi Delhi Technical University for Women with a CGPA of 9.40/10.
+              Technology at Indira Gandhi Delhi Technical University for Women with a CGPA of 9.33/10.
             </motion.p>
 
             <motion.p variants={fadeInUp} className="text-lg leading-relaxed glass-card p-6">
@@ -131,7 +131,9 @@ export default function AboutSection() {
                 <div>
                   <h4 className="font-medium text-primary">Hackathon Winner</h4>
                   <p className="text-sm text-foreground/70">
-                    Winner of InnovateX Hackathon by Delhi Technological University
+                    Winner of Microsoft Code; Without Barriers Hackathon 2025 out of 6000+ participants.
+                    <br></br>
+                    Winner of 24 hr InnovateX Hackathon 2024 by Delhi Technological University out of 500+ teams.
                   </p>
                 </div>
               </motion.div>

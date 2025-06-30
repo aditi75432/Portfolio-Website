@@ -22,7 +22,7 @@ export default function EducationPage() {
       degree: "Bachelors of Technology, Information Technology",
       period: "Aug. 2023 - May 2027",
       location: "Delhi, India",
-      grade: "CGPA: 9.40/10",
+      grade: "CGPA: 9.33/10",
       achievements: [
         "Beta Microsoft Learn Student Ambassador",
         "Web Development Team Member at Microsoft Students Club",

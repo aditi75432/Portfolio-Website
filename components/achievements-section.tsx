@@ -18,6 +18,13 @@ export default function AchievementsSection() {
 
   const achievements: Achievement[] = [
     {
+      title: "Microsoft Code; Without Barriers 2025 Hackathon Winner",
+      description: "Top Winner",
+      icon: <Trophy className="h-8 w-8" />,
+      details:
+        "Secured 2nd place for my project SEA-Bridge under the HEX challenge with SEA Bridge in the individual Global Hackathon out of 6000+ participants. Won a Prize of $200(USD) by Microsoft, 3 hours of mentorship and 1 hour of mentorship with C- Suite of HEX. ",
+    },
+    {
       title: "LFX'25 Intern",
       description: "The Linux Foundation @RISC-V International Mentee",
       icon: <Trophy className="h-8 w-8" />,
@@ -29,7 +36,7 @@ export default function AchievementsSection() {
       description: "Top 4 at Delhi Technological University",
       icon: <Trophy className="h-8 w-8" />,
       details:
-        "Led a team of 4 to develop ARIOSE, a credit card fraud detection platform that achieved 92% fraud detection accuracy. The project leveraged blockchain technology for enhanced security and transparency, and integrated IPFS for secure, decentralized storage.",
+        "Led a team of 4 to develop ARIOSE, a credit card fraud detection platform that achieved 92% fraud detection accuracy. Received a Prize of $100. The project leveraged blockchain technology for enhanced security and transparency, and integrated IPFS for secure, decentralized storage.",
     },
     {
       title: "Beta-Microsoft Learn Student Ambassador",
