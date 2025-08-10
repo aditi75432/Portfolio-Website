@@ -16,6 +16,7 @@ const navLinks = [
   { name: "Projects", path: "/projects" },
   { name: "Research", path: "/research" },
   { name: "Hackathons", path: "/hackathons" },
+  { name: "GitHub PRs", path: "/merged-prs" },
 ]
 
 export default function Navbar() {
