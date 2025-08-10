@@ -1,17 +1,18 @@
-
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Code2, Database, Globe, Cpu, Server, Braces, BookOpen, GitBranch, Terminal, Brain } from "lucide-react"
-import { motion } from "framer-motion"
+
+// Common Devicon base (CDN)
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons"
 
 type Skill = {
   name: string
   level: number
   icon: React.ReactNode
+  logoUrl?: string
 }
 
 type SkillCategory = {
@@ -19,51 +20,130 @@ type SkillCategory = {
   skills: Skill[]
 }
 
+function SkillLogo({ name, icon, logoUrl }: { name: string; icon: React.ReactNode; logoUrl?: string }) {
+  return (
+    <div className="flex flex-col items-center gap-2 min-w-[88px] px-2 py-2">
+      {logoUrl ? (
+        <img
+          src={logoUrl || "/placeholder.svg"}
+          alt={`${name} logo`}
+          width={56}
+          height={56}
+          className="h-14 w-14 object-contain"
+          loading="lazy"
+        />
+      ) : (
+        <div className="h-14 w-14 flex items-center justify-center rounded-md bg-white/5">
+          <span className="text-primary dark:text-secondary">{icon}</span>
+        </div>
+      )}
+      <span className="text-xs md:text-sm text-foreground/90">{name}</span>
+    </div>
+  )
+}
+
 export default function SkillsSection() {
   const [activeTab, setActiveTab] = useState("technical")
 
+  // TECHNICAL SKILLS
   const technicalSkills: SkillCategory[] = [
     {
       name: "Languages",
       skills: [
-        { name: "Python", level: 90, icon: <Terminal className="h-5 w-5" /> },
-        { name: "JavaScript", level: 85, icon: <Braces className="h-5 w-5" /> },
-        { name: "Java", level: 80, icon: <Code2 className="h-5 w-5" /> },
-        { name: "C/C++", level: 75, icon: <Terminal className="h-5 w-5" /> },
+        {
+          name: "Python",
+          level: 90,
+          icon: <Terminal className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/python/python-original.svg`,
+        },
+        {
+          name: "JavaScript",
+          level: 85,
+          icon: <Braces className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/javascript/javascript-original.svg`,
+        },
+        { name: "Java", level: 80, icon: <Code2 className="h-5 w-5" />, logoUrl: `${DEVICON}/java/java-original.svg` },
+        {
+          name: "C/C++",
+          level: 75,
+          icon: <Terminal className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/cplusplus/cplusplus-original.svg`,
+        },
       ],
     },
     {
       name: "Web Technologies",
       skills: [
-        { name: "React.js", level: 85, icon: <Globe className="h-5 w-5" /> },
-        { name: "Node.js", level: 80, icon: <Server className="h-5 w-5" /> },
-        { name: "HTML/CSS", level: 90, icon: <Code2 className="h-5 w-5" /> },
-        { name: "Express.js", level: 75, icon: <Server className="h-5 w-5" /> },
+        {
+          name: "React.js",
+          level: 85,
+          icon: <Globe className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/react/react-original.svg`,
+        },
+        {
+          name: "Node.js",
+          level: 80,
+          icon: <Server className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/nodejs/nodejs-original.svg`,
+        },
+        {
+          name: "HTML/CSS",
+          level: 90,
+          icon: <Code2 className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/html5/html5-original.svg`,
+        },
+        {
+          name: "Express.js",
+          level: 75,
+          icon: <Server className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/express/express-original.svg`,
+        },
       ],
     },
     {
       name: "Databases & Tools",
       skills: [
-        { name: "MongoDB", level: 80, icon: <Database className="h-5 w-5" /> },
-        { name: "SQL", level: 75, icon: <Database className="h-5 w-5" /> },
-        { name: "Git", level: 85, icon: <GitBranch className="h-5 w-5" /> },
-        { name: "Tailwind CSS", level: 90, icon: <Code2 className="h-5 w-5" /> },
+        {
+          name: "MongoDB",
+          level: 80,
+          icon: <Database className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/mongodb/mongodb-original.svg`,
+        },
+        {
+          name: "SQL",
+          level: 75,
+          icon: <Database className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/mysql/mysql-original.svg`,
+        },
+        { name: "Git", level: 85, icon: <GitBranch className="h-5 w-5" />, logoUrl: `${DEVICON}/git/git-original.svg` },
+        {
+          name: "Tailwind CSS",
+          level: 90,
+          icon: <Code2 className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/tailwindcss/tailwindcss-plain.svg`,
+        },
       ],
     },
     {
       name: "AI & ML",
       skills: [
+        // For conceptual skills, keep icons; where a logo exists, use it.
         { name: "Machine Learning", level: 85, icon: <Brain className="h-5 w-5" /> },
         { name: "NLP", level: 80, icon: <Brain className="h-5 w-5" /> },
         { name: "Data Analysis", level: 85, icon: <Cpu className="h-5 w-5" /> },
-        { name: "scikit-learn", level: 80, icon: <Cpu className="h-5 w-5" /> },
+        {
+          name: "scikit-learn",
+          level: 80,
+          icon: <Cpu className="h-5 w-5" />,
+          logoUrl: `${DEVICON}/scikitlearn/scikitlearn-original.svg`,
+        },
       ],
     },
     {
       name: "Computer Science Fundamentals",
       skills: [
         { name: "Data Structure And Algorithms", level: 90, icon: <Brain className="h-5 w-5" /> },
-        { name: "Database Management System", level: 80, icon: <Brain className="h-5 w-5" /> },
+        { name: "Database Management System", level: 80, icon: <Database className="h-5 w-5" /> },
         { name: "Operating System", level: 85, icon: <Cpu className="h-5 w-5" /> },
         { name: "Object-Oriented Programming", level: 80, icon: <Cpu className="h-5 w-5" /> },
         { name: "Computer Network", level: 80, icon: <Cpu className="h-5 w-5" /> },
@@ -71,6 +151,7 @@ export default function SkillsSection() {
     },
   ]
 
+  // NON-TECHNICAL SKILLS
   const nonTechnicalSkills: SkillCategory[] = [
     {
       name: "Soft Skills",
@@ -101,19 +182,24 @@ export default function SkillsSection() {
     },
   ]
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+  const renderGroup = (group: SkillCategory) => {
+    return (
+      <div key={group.name} className="mb-10">
+        <h3 className="text-xl md:text-2xl font-display font-bold mb-4">{group.name}</h3>
+        <div className="w-full overflow-x-auto">
+          <div className="flex items-start gap-6 md:gap-10 min-w-max">
+            {group.skills.map((skill, i) => (
+              <SkillLogo
+                key={`${group.name}-${skill.name}-${i}`}
+                name={skill.name}
+                icon={skill.icon}
+                logoUrl={skill.logoUrl}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -121,113 +207,32 @@ export default function SkillsSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-transparent pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.h2
-          className="section-heading mb-16 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          My Skills
-        </motion.h2>
+        <h2 className="section-heading mb-10 text-left">Skills</h2>
 
-        <Tabs defaultValue="technical" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-12 glass-card">
+        <Tabs defaultValue="technical" className="w-full">
+          <TabsList className="inline-grid grid-cols-2 gap-2 mb-8 glass-card">
             <TabsTrigger
               value="technical"
-              className="text-lg font-medium data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
+              className="text-base md:text-lg font-medium data-[state=active]:bg-primary/20 data-[state=active]:text-primary"
               onClick={() => setActiveTab("technical")}
             >
-              Technical Skills
+              Technical
             </TabsTrigger>
             <TabsTrigger
               value="non-technical"
-              className="text-lg font-medium data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary"
+              className="text-base md:text-lg font-medium data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary"
               onClick={() => setActiveTab("non-technical")}
             >
-              Non-Technical Skills
+              Non-Technical
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="technical" className="space-y-12">
-            {technicalSkills.map((category, index) => (
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={container}
-              >
-                <h3 className="text-xl font-display font-bold mb-6 gradient-text">{category.name}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skillIndex}
-                      className="glass-card p-4"
-                      variants={item}
-                      whileHover={{
-                        scale: 1.03,
-                        boxShadow: "0 0 20px rgba(0, 195, 255, 0.3)",
-                      }}
-                    >
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-primary/20 p-2 rounded-full">{skill.icon}</div>
-                        <h4 className="font-medium text-primary">{skill.name}</h4>
-                      </div>
-                      <div className="w-full bg-background/30 rounded-full h-2.5 overflow-hidden">
-                        <motion.div
-                          className="h-2.5 rounded-full bg-gradient-to-r from-primary to-secondary"
-                          style={{ width: "0%" }}
-                          animate={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: 0.2 }}
-                          aria-label={`${skill.level}% proficiency in ${skill.name}`}
-                        ></motion.div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          <TabsContent value="technical">
+            <div className="space-y-4">{technicalSkills.map(renderGroup)}</div>
           </TabsContent>
 
-          <TabsContent value="non-technical" className="space-y-12">
-            {nonTechnicalSkills.map((category, index) => (
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-                variants={container}
-              >
-                <h3 className="text-xl font-display font-bold mb-6 gradient-text">{category.name}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skillIndex}
-                      className="glass-card p-4"
-                      variants={item}
-                      whileHover={{
-                        scale: 1.03,
-                        boxShadow: "0 0 20px rgba(138, 43, 226, 0.3)",
-                      }}
-                    >
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="bg-secondary/20 p-2 rounded-full">{skill.icon}</div>
-                        <h4 className="font-medium text-secondary">{skill.name}</h4>
-                      </div>
-                      <div className="w-full bg-background/30 rounded-full h-2.5 overflow-hidden">
-                        <motion.div
-                          className="h-2.5 rounded-full bg-gradient-to-r from-secondary to-accent"
-                          style={{ width: "0%" }}
-                          animate={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: 0.2 }}
-                          aria-label={`${skill.level}% proficiency in ${skill.name}`}
-                        ></motion.div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          <TabsContent value="non-technical">
+            <div className="space-y-4">{nonTechnicalSkills.map(renderGroup)}</div>
           </TabsContent>
         </Tabs>
       </div>
