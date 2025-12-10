@@ -31,6 +31,51 @@ export default function ProjectsPage() {
 
   const projects: Project[] = [
     {
+      title: "NexusNote",
+      description: "Collaborative Text Editor with AI Assistant",
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "React.js",
+        "MongoDB",
+        "Google Generative AI SDK (Model: gemini-2.5-flash)",
+        
+      ],
+      features: [
+        "A real-time collaborative text editor designed to replicate the core functionality of Google Docs.",
+        "It allows multiple users (>10) to edit documents simultaneously with sub-200ms latency, manage document permissions via Role-Based Access Control (RBAC), and utilize an integrated AI writing assistant powered by Google Gemini.",
+      ],
+      category: "web",
+      links: {
+        github: "https://github.com/aditi75432/nexusnote-editor",
+      },
+      icon: <Code className="h-6 w-6" />,
+      images: ["/nexus1.png", "/nexus2.png"],
+      // video: "/placeholder.svg?height=300&width=500",
+    },
+    {
+      title: "SEA - Bridge",
+      description: "AI-Powered Culturally Adaptive and Localized Learning Platform",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Azure AI services",
+      ],
+      features: [
+        "SEA Bridge revolutionizes education across Southeast Asia by providing AI-powered, culturally adaptive and localized learning experiences. This platform doesn't just translate content—it transforms it to match local customs, examples, and learning preferences across 12+ SEA languages.",
+        "Winner - Microsoft Code; Without Barriers 2025 Hackathon HEX Problem Statement",
+        "Increased Engagement: 40-60% higher completion rates with culturally relevant content"
+      ],
+      category: "ai",
+      links: {
+        github: "https://github.com/aditi75432/SEA-Bridge-learning-platform",
+      },
+      icon: <Database className="h-6 w-6" />,
+      images: ["/sea1.png", "/sea2.png"],
+      // video: "/placeholder.svg?height=300&width=500",
+    },
+    {
       title: "KARTIQUE",
       description: "AI-Powered Smart Shopping Assistant",
       technologies: [

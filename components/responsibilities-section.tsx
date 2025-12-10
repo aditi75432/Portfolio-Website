@@ -13,6 +13,15 @@ type Responsibility = {
 
 export default function ResponsibilitiesSection() {
   const responsibilities: Responsibility[] = [
+     {
+      title: "Competitive Programming Circle Manager and Data Structures Mentor ",
+      organization: "Google Developer Groups On Campus IGDTUW",
+      period: "Oct. 2024 - Present",
+      description:
+        "Mentoring 150+ students with hands-on problem-solving sessions, helping them improve their coding skills.",
+      icon: <Users className="h-6 w-6" />,
+      link: "https://developers.google.com/community/gdg",
+    },
     {
       title: "Web Development Team Member",
       organization: "Microsoft Students Club - IGDTUW",
@@ -21,15 +30,7 @@ export default function ResponsibilitiesSection() {
       icon: <Users className="h-6 w-6" />,
       link: "https://github.com/aditi75432/MicrosoftStudentsClub",
     },
-    {
-      title: "Data Structures and Competitive Programming Mentor",
-      organization: "Google Developer Groups On Campus IGDTUW",
-      period: "Oct. 2024 - Present",
-      description:
-        "Mentoring 150+ students with hands-on problem-solving sessions, helping them improve their coding skills.",
-      icon: <Users className="h-6 w-6" />,
-      link: "https://developers.google.com/community/gdg",
-    },
+   
   ]
 
   return (

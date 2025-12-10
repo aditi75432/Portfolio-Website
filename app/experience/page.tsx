@@ -19,15 +19,15 @@ export default function ExperiencePage() {
     {
       title: "LFX 2025 Intern",
       company: "The Linux Foundation @RISC-V International",
-      period: "Jun. 2025 - present",
+      period: "Jun. 2025 - Sept. 2025",
       location: "Remote",
       description: [
-        "Workload Analysis Flow Using RISC-V Olympia Performance Model.",
-        "Establish a SimPoint flow to reduce the workloads (QEMU or other instruction set simulators",
-        "Tools to run traces on Olympia and generate perf data (python, C++).",
+        "Engineered a unified simulation platform to dramatically simplify and accelerate performance analysis for any RISC-V workload, including bare-metal, Linux, and standard benchmarks (Embench, Dhrystone).",
+        "Slashed project setup time by over 95% (from 1+ hour to minutes) by creating a containerized (Docker) environment with a pre-built toolchain.",
+        "Boosted core analysis performance by 2.7x, enabling the generation of critical simulation data (Basic Block Vectors) significantly faster than traditional methods.",
       ],
-      technologies: ["Python", "C++", "Computer Architecture", "SimPoint", "QEMU"],
-      image: "/riscv.png",
+      technologies: ["Automated Scripting","Docker","Python", "C++", "Computer Architecture", "SimPoint", "QEMU"],
+      image: "/riscvm.png",
     },
     {
       title: "Quantum Computing Research Intern",
@@ -35,7 +35,8 @@ export default function ExperiencePage() {
       period: "Jun. 2025 - Jul. 2025",
       location: "Delhi, India",
       description: [
-        "Quantum-safe cryptographic algorithms and their classical-quantum interface, enhancing secure data transmission strategies at DRDO-SAG.",
+        "A Framework for Real-Time Video Encryption Using a Coherent One-Way Quantum Key Distribution System.",
+        "End-to-End Simulation of the Coherent One-Way QKD System with Active Eavesdropping Detection and Real-Time Application."
         
       ],
       technologies: ["Python", "Quantum Computing"],
